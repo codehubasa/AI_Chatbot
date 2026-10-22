@@ -85,8 +85,10 @@ const leadLimiter = rateLimit({
 });
 
 // Path to data files
-const LEADS_FILE = path.join(__dirname, 'leads.json');
-const SETTINGS_FILE = path.join(__dirname, 'settings.json');
+const DATA_DIR = process.env.DATA_DIR || __dirname;
+fs.mkdirSync(DATA_DIR, { recursive: true });
+const LEADS_FILE = path.join(DATA_DIR, 'leads.json');
+const SETTINGS_FILE = path.join(DATA_DIR, 'settings.json');
 
 // Active API configuration
 let activeApiKey = (process.env.GEMINI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY || '').trim();
