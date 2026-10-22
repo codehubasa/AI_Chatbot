@@ -1,0 +1,15 @@
+{
+  "businessName": "Cypher Chatbot",
+  "botName": "Cypher Chatbot",
+  "welcomeMessage": "Hi! I'm Cypher Chatbot. Ask me anything, and I'll do my best to help.",
+  "primaryColor": "#67264f",
+  "themeAccent": "plum-coral",
+  "businessContext": "",
+  "quickPrompts": [
+    "Explain a difficult concept simply",
+    "Help me solve a math problem",
+    "Help me write or improve some text",
+    "Tell me something interesting about science"
+  ],
+  "enableSound": true
+}
