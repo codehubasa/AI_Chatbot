@@ -2,19 +2,13 @@ services:
   - type: web
     name: cypher-chatbot
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm ci && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
-    disk:
-      name: cypher-chatbot-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production
-      - key: DATA_DIR
-        value: /var/data
       - key: ADMIN_API_TOKEN
         generateValue: true
       - key: GEMINI_API_KEY
